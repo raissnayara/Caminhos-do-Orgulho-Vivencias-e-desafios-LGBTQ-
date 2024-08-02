@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 88892202}
   - component: {fileID: 88892201}
   - component: {fileID: 88892200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 88892197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: -2.59, z: 0}
+  m_LocalPosition: {x: -7.9, y: -3.32, z: 0}
   m_LocalScale: {x: 1.5447, y: 1.3502, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -222,7 +222,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648f8e7e3387e704cb115052b9d48e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  groundDistance: 0.4
+  isGrounded: 1
+  footOffset:
+  - {x: -0.48, y: 0.09, z: 0}
+  - {x: 0.29, y: 0.09, z: 0}
   speed: 5
+  jumpForce: 5
 --- !u!61 &88892201
 BoxCollider2D:
   m_ObjectHideFlags: 0
