@@ -40,8 +40,14 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
-        
-        
+
+        PhysicCheck();
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb2d.velocity = Vector2.zero;
+            rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+
     }
 
     private void FixedUpdate()
@@ -63,9 +69,7 @@ public class Player : MonoBehaviour
     {
         isGrounded = false;
         leftCheck = Raycast(new Vector2(footOffset[0].x, footOffset[0].y), Vector2.down, groundDistance, groundLayer);
-        Vector2.down, groundDistance, groundLayer);
        rightCheck = Raycast(new Vector2(footOffset[0].x, footOffset[0].y), Vector2.down, groundDistance, groundLayer);
-       Vector2.down, groundDistance, groundLayer);
        
        if (leftCheck || rightCheck)
        {
