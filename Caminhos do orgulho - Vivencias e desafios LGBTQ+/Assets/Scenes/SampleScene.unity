@@ -455,9 +455,7 @@ MonoBehaviour:
     m_Bits: 256
   groundDistance: 0.4
   isGrounded: 1
-  footOffset:
-  - {x: 0.47, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  footOffset: []
   speed: 2
   jumpForce: 5
 --- !u!212 &1917152185
@@ -537,7 +535,7 @@ Animator:
   m_GameObject: {fileID: 1917152181}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 085464e1650fbbc4db465f0598124d5a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9050651e4f9006f45a4609ede8499691, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
