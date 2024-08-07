@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float jumpForce;
     private bool isJumping;
     private bool doubleJump;
+    private bool isFire;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -20,8 +21,14 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Move();
+        
         Jump();
+        BowFire();
+    }
+
+    void FixedUpdate()
+    {
+        Move();
     }
 
     void Move()
@@ -49,7 +56,7 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector3(0,180,0);
         }
 
-        if (movement == 0 && !isJumping)
+        if (movement == 0 && !isJumping && isFire)
         {
             anim.SetInteger("transition",0);
         }
@@ -80,6 +87,24 @@ public class Player : MonoBehaviour
                 }
             }
             
+        }
+
+        
+    }
+    
+    void BowFire()
+    {
+        StartCoroutine("Fire");
+    }
+
+    IEnumerator Fire()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            isFire = true;
+            anim.SetInteger("transition", 3);
+            yield return new WaitForSeconds(1f);
+            anim.SetInteger("transition", 0);
         }
     }
 
