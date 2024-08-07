@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     private bool isJumping;
     private bool doubleJump;
     private bool isFire;
+    public GameObject bow;
+    public Transform FirePoint;
+    private float movement;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -33,7 +36,7 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        float movement = Input.GetAxis("Horizontal");
+        float movement = Input.GetAxisRaw("Horizontal");
         rig.velocity = new Vector2(movement * speed, rig.velocity.y);
 
         if (movement > 0 )
@@ -56,7 +59,7 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector3(0,180,0);
         }
 
-        if (movement == 0 && !isJumping && isFire)
+        if (movement == 0 && !isJumping && !isFire)
         {
             anim.SetInteger("transition",0);
         }
@@ -103,7 +106,20 @@ public class Player : MonoBehaviour
         {
             isFire = true;
             anim.SetInteger("transition", 3);
-            yield return new WaitForSeconds(1f);
+            GameObject Bow = Instantiate(bow,FirePoint.position,FirePoint.rotation);
+
+            if (transform.rotation.y == 0)
+            {
+                bow.GetComponent<Bow>().isRight = true;
+            }
+
+            if (transform.rotation.y == 180)
+            {
+                bow.GetComponent<Bow>().isRight = false;
+            }
+            
+            
+            yield return new WaitForSeconds(0.2f);
             anim.SetInteger("transition", 0);
         }
     }
