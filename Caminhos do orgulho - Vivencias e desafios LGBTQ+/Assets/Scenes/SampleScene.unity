@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 360069626}
   - component: {fileID: 360069625}
   m_Layer: 0
-  m_Name: 01452ff8c01984e53e02ef877afd6917
+  m_Name: fundo ref
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 1853389791}
   - component: {fileID: 1853389790}
   - component: {fileID: 1853389793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -476,7 +476,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1917152183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -534,14 +534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648f8e7e3387e704cb115052b9d48e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  groundDistance: 0.4
-  isGrounded: 1
-  footOffset: []
-  speed: 2
-  jumpForce: 5
+  speed: 5
+  jumpForce: 7
 --- !u!212 &1917152185
 SpriteRenderer:
   m_ObjectHideFlags: 0
