@@ -13,7 +13,7 @@ public class Bow : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        Destroy(gameObject,2f);
+        Destroy(gameObject,1.5f);
     }
 
     // Update is called once per frame

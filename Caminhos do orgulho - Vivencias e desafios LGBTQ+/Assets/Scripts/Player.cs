@@ -108,18 +108,19 @@ public class Player : MonoBehaviour
             anim.SetInteger("transition", 3);
             GameObject Bow = Instantiate(bow,FirePoint.position,FirePoint.rotation);
 
-            if (transform.rotation.y == 0)
-            {
-                bow.GetComponent<Bow>().isRight = true;
-            }
-
             if (transform.rotation.y == 180)
             {
-                bow.GetComponent<Bow>().isRight = false;
+                Bow.GetComponent<Bow>().isRight = true;
+            }
+
+            if (transform.rotation.y == 0)
+            {
+                Bow.GetComponent<Bow>().isRight = false;
             }
             
             
             yield return new WaitForSeconds(0.2f);
+            isFire = false;
             anim.SetInteger("transition", 0);
         }
     }
