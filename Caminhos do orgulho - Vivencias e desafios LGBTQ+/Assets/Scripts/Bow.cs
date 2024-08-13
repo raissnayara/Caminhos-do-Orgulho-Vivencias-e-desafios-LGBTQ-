@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Bow : MonoBehaviour
 {
     private Rigidbody2D rig;
     public bool isRight;
+    public int damage;
 
     public float speed;
     // Start is called before the first frame update
@@ -29,5 +31,14 @@ public class Bow : MonoBehaviour
             rig.velocity = Vector2.left * speed;
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "enemySnake")
+        {
+            collision.GetComponent<EnemySnake>().Damamge(damage);
+            Destroy(gameObject);
+        }
     }
 }

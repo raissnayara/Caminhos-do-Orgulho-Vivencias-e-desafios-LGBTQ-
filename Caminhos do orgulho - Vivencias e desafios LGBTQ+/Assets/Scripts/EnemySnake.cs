@@ -8,6 +8,7 @@ public class EnemySnake : MonoBehaviour
     public float WalkTime;
     public float timer;
     public bool WalkRight = true;
+    public int Health; 
 
     private Rigidbody2D rig;
     // Start is called before the first frame update
@@ -39,4 +40,14 @@ public class EnemySnake : MonoBehaviour
         }
             
     }
+
+    public void Damamge(int dmg)
+    {
+        Health -= dmg;
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
 }
