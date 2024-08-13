@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public GameObject bow;
     public Transform FirePoint;
     private float movement;
+    public int Health;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -123,6 +124,28 @@ public class Player : MonoBehaviour
             isFire = false;
             anim.SetInteger("transition", 0);
         }
+    }
+
+    public void Damage(int dmg)
+    {
+        Health -= dmg;
+        
+        Debug.Log("bateu");
+        if (transform.rotation.y == 0)
+        {
+            transform.position += new Vector3(-1, 1, 1);
+        }
+        
+        if (transform.rotation.y == 180)
+        {
+            transform.position += new Vector3(1, 1, 1);
+        }
+
+        if (Health <= 0)
+        {
+            
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D coll)

@@ -8,9 +8,11 @@ public class EnemySnake : MonoBehaviour
     public float WalkTime;
     public float timer;
     public bool WalkRight = true;
-    public int Health; 
+    public int Health;
+    public int damage = 1;
 
     private Rigidbody2D rig;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +40,7 @@ public class EnemySnake : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 0);
             rig.velocity = Vector2.left * speed;
         }
-            
+
     }
 
     public void Damamge(int dmg)
@@ -49,5 +51,16 @@ public class EnemySnake : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
-}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("bateu");
+            collision.gameObject.GetComponent<Player>().Damage(damage);
+        }
+
+
+    }
+
+}    

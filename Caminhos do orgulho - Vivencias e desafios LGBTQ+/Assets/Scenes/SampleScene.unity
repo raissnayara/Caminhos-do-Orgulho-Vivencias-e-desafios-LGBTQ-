@@ -674,6 +674,7 @@ MonoBehaviour:
   timer: 2
   WalkRight: 0
   Health: 1
+  damage: 1
 --- !u!1 &1389756493
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +712,7 @@ MonoBehaviour:
   timer: 2
   WalkRight: 0
   Health: 1
+  damage: 1
 --- !u!61 &1389756495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1089,6 +1091,7 @@ MonoBehaviour:
   jumpForce: 7
   bow: {fileID: 5721653374377551771, guid: 6255c72a17b14774c85f1d20edffe89d, type: 3}
   FirePoint: {fileID: 825515243}
+  Health: 3
 --- !u!212 &1917152185
 SpriteRenderer:
   m_ObjectHideFlags: 0
