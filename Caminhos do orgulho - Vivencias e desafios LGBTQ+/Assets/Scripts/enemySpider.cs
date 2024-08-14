@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySnake : MonoBehaviour
+public class enemySpider : MonoBehaviour
 {
+    
     public float speed;
     public float WalkTime;
     public float timer;
     public bool WalkRight = true;
     public int Health;
     public int damage = 1;
-
+    
     private Rigidbody2D rig;
-    public Transform playerPos;
-    public Rigidbody2D groundRb;
-    public float distance;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,26 +40,8 @@ public class EnemySnake : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 0);
             rig.velocity = Vector2.left * speed;
         }
-        
-        
-        distance = Vector2.Distance(transform.position, playerPos.position);
-
-        if (distance < 4)
-        {
-            Seguir();
-        }
-
     }
     
-    
-    
-    
-    
-    private void Seguir()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
-    }
-
     public void Damamge(int dmg)
     {
         Health -= dmg;
@@ -82,5 +61,4 @@ public class EnemySnake : MonoBehaviour
 
 
     }
-
-}    
+}
