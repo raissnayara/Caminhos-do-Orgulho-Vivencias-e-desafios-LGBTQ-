@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
 
 public class enemyBat : MonoBehaviour
 {
@@ -39,9 +40,12 @@ public class enemyBat : MonoBehaviour
         Health -= dmg;
         if (Health <= 0)
         {
+            //SceneManager.LoadScene("Boss2");
             Destroy(gameObject);
         }
     }
+    
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

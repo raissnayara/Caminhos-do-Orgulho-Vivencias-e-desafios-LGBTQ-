@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 172825095}
   - component: {fileID: 172825094}
   - component: {fileID: 172825096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spider ref
   m_TagString: enemySpider
   m_Icon: {fileID: 0}
@@ -606,7 +606,7 @@ Transform:
   m_GameObject: {fileID: 172825090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.88, y: -6.67, z: 0.105744354}
+  m_LocalPosition: {x: 24.03, y: -4.1, z: 0.105744354}
   m_LocalScale: {x: 0.87626, y: 0.87626, z: 0.87626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -627,7 +627,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -638,7 +638,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &172825095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -668,10 +668,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.019951582, y: -0.0718236}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -682,7 +682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 2.2100968, y: 1.7232926}
   m_EdgeRadius: 0
 --- !u!114 &172825096
 MonoBehaviour:
@@ -700,7 +700,7 @@ MonoBehaviour:
   WalkTime: 2
   timer: 2
   WalkRight: 1
-  Health: 2
+  Health: 1
   damage: 1
 --- !u!1 &295363843
 GameObject:
@@ -1777,10 +1777,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.24634612, y: -0.07699287}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1791,7 +1791,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.99, y: 4.99}
+  m_Size: {x: 3.5119622, y: 4.836014}
   m_EdgeRadius: 0
 --- !u!50 &1389756496
 Rigidbody2D:
@@ -1805,10 +1805,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1881,7 +1881,7 @@ Transform:
   m_GameObject: {fileID: 1389756493}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0083774375, y: -0, z: -0, w: 0.99996495}
-  m_LocalPosition: {x: 63.309998, y: -6.7000003, z: 0.105744354}
+  m_LocalPosition: {x: 63.25, y: -6.83, z: 0.1}
   m_LocalScale: {x: 0.39012, y: 0.3901201, z: 0.3901201}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2066,7 +2066,7 @@ GameObject:
   - component: {fileID: 1557265516}
   - component: {fileID: 1557265515}
   - component: {fileID: 1557265514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyBat
   m_TagString: enemyBat
   m_Icon: {fileID: 0}
@@ -2593,7 +2593,7 @@ Transform:
   m_GameObject: {fileID: 1917152181}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.8, y: -3.2, z: 0}
+  m_LocalPosition: {x: -4.22, y: -3.08, z: 0}
   m_LocalScale: {x: 0.42548, y: 0.42548, z: 0.42548}
   m_ConstrainProportionsScale: 0
   m_Children:

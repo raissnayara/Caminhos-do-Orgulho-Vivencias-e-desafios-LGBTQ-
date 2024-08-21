@@ -10,7 +10,7 @@ public class enemySpider : MonoBehaviour
     public float timer;
     public bool WalkRight = true;
     public int Health;
-    public int damage;
+    public int damage = 1;
     
     private Rigidbody2D rig;
     // Start is called before the first frame update
@@ -58,7 +58,5 @@ public class enemySpider : MonoBehaviour
             Debug.Log("bateu");
             collision.gameObject.GetComponent<Player>().Damage(damage);
         }
-
-
     }
 }

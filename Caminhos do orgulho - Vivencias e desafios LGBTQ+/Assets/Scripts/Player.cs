@@ -132,6 +132,7 @@ public class Player : MonoBehaviour
     {
         Health -= dmg;
         GameController.Instance.UpdatesLives(Health);
+        anim.SetTrigger("morrendo");
         
         if (Health <= 0)
         {
