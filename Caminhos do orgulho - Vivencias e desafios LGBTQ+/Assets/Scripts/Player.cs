@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public GameObject bow;
     public Transform FirePoint;
     private float movement;
-    public int Health;
+    public int Health = 3;
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        
+        GameController.Instance.UpdatesLives(Health);
     }
 
     private void Update()
@@ -129,6 +131,12 @@ public class Player : MonoBehaviour
     public void Damage(int dmg)
     {
         Health -= dmg;
+        GameController.Instance.UpdatesLives(Health);
+        
+        if (Health <= 0)
+        {
+            
+        }
         
         Debug.Log("bateu");
         if (transform.rotation.y == 0)
@@ -140,11 +148,7 @@ public class Player : MonoBehaviour
         {
             transform.position += new Vector3(1, 1, 1);
         }
-
-        if (Health <= 0)
-        {
-            
-        }
+        
 
     }
 
@@ -153,6 +157,18 @@ public class Player : MonoBehaviour
         if (coll.gameObject.layer == 8)
         {
             isJumping = false;
+
+            transform.parent = coll.transform;
+        }
+         
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.layer == 8)
+        {
+            transform.parent = null;
         }
     }
 }

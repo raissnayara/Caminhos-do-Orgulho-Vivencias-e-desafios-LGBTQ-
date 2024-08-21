@@ -10,7 +10,7 @@ public class enemySpider : MonoBehaviour
     public float timer;
     public bool WalkRight = true;
     public int Health;
-    public int damage = 1;
+    public int damage;
     
     private Rigidbody2D rig;
     // Start is called before the first frame update
