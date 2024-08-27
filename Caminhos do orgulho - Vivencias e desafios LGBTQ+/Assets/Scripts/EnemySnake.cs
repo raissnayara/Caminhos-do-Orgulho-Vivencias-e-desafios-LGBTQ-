@@ -82,5 +82,6 @@ public class EnemySnake : MonoBehaviour
 
 
     }
+    
 
 }    

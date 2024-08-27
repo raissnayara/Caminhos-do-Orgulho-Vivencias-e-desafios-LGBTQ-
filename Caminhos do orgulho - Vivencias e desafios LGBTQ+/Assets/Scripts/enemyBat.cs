@@ -55,5 +55,17 @@ public class enemyBat : MonoBehaviour
             collision.gameObject.GetComponent<Player>().Damage(damage);
         }
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+     //   if (collision.gameObject.tag == "player")
+     //   {
+            
+    //        SceneManager.LoadScene("level-2");
+    //    }
+
+
+    //}
+    
+    
 
 }    
