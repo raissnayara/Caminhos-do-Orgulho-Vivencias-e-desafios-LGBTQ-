@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class turtlePlatform : MonoBehaviour
 {
@@ -13,6 +13,11 @@ public class turtlePlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //platform = transform.parent;
+        /*foreach (var ponto in posAtual)
+        {
+            ponto.parent = null;
+        }*/
         platform.position = posAtual[0].position;
         IdPos = 1;
         
@@ -24,7 +29,7 @@ public class turtlePlatform : MonoBehaviour
     {
         platform.position = Vector3.MoveTowards(platform.position, posAtual[IdPos].position, speed * Time.deltaTime);
 
-        if (platform.position == posAtual[IdPos].position)
+        if (Vector3.Distance(platform.position, posAtual[IdPos].position)<0.01f)
         {
             IdPos += 1;
         }

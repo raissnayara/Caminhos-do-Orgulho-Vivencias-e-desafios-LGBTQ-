@@ -19,6 +19,7 @@ public class EnemySnake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rig = GetComponent<Rigidbody2D>();
     }
 
