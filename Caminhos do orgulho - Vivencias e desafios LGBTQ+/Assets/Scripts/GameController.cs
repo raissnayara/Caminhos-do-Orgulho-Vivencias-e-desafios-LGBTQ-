@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
         HealthText.text = "X " + value.ToString();
     }
     
-    public void Carregarcena()
+    public void Carregarcena(string level)
     {
         SceneManager.LoadScene("level-2");
     }
