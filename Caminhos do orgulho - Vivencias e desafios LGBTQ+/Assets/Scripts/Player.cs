@@ -81,7 +81,9 @@ public class Player : MonoBehaviour
                 rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 doubleJump = true;
-                AudioObserver.OnPlaySfxEvent("pulo");
+                AudioObserver.OnPlaySfxEvent("Jump");
+                ParticleObserver.OnParticleSpwnEvent(transform.position);
+                
             }
 
             else
@@ -91,7 +93,8 @@ public class Player : MonoBehaviour
                     anim.SetInteger("transition", 2);
                     rig.AddForce(new Vector2(0, jumpForce * 2), ForceMode2D.Impulse);
                     doubleJump = false;
-                    AudioObserver.OnPlaySfxEvent("pulo");
+                    AudioObserver.OnPlaySfxEvent("Jump");
+                    ParticleObserver.OnParticleSpwnEvent(transform.position);
                 }
             }
             
