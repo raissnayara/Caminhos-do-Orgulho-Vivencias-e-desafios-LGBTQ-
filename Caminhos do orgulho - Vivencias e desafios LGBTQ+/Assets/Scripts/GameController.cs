@@ -10,6 +10,10 @@ public class GameController : MonoBehaviour
     
 
     public static GameController Instance;
+
+    public int score;
+
+    public Text ScoreText;
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,6 +35,12 @@ public class GameController : MonoBehaviour
     {
         
     }
+
+   public void UpdateScore(int value)
+   {
+       score += value;
+       ScoreText.text = score.ToString();
+   }
 
     public void UpdatesLives(int value)
     {
