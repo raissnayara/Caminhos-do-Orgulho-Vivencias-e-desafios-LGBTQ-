@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b758938385dc6548b362017581fd7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProxLevel: level-2
+  ProxLevel: level-3
 --- !u!61 &308212941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1302,6 +1302,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthText: {fileID: 1089042763}
+  score: 0
+  ScoreText: {fileID: 0}
 --- !u!4 &1044331115
 Transform:
   m_ObjectHideFlags: 0

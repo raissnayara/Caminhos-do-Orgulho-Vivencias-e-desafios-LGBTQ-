@@ -25,7 +25,7 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameController.Instance.Carregarcena("level-2");
+            GameController.Instance.Carregarcena("Level Boss 1");
         }
     }
 }

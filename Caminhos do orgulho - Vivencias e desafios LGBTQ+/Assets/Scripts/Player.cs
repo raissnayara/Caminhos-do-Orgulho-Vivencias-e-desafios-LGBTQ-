@@ -116,12 +116,12 @@ public class Player : MonoBehaviour
             anim.SetInteger("transition", 3);
             GameObject Bow = Instantiate(bow,FirePoint.position,FirePoint.rotation);
 
-            if (transform.rotation.y == 180)
+            if (transform.rotation.y == 0)
             {
                 Bow.GetComponent<Bow>().isRight = true;
             }
 
-            if (transform.rotation.y == 0)
+            if (transform.rotation.y == 180)
             {
                 Bow.GetComponent<Bow>().isRight = false;
             }
