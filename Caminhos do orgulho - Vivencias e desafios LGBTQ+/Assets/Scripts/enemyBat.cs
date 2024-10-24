@@ -24,7 +24,7 @@ public class enemyBat : MonoBehaviour
     {
         distance = Vector2.Distance(transform.position, playerPos.position);
 
-        if (distance < 4)
+        if (distance < 6)
         {
             Seguir();
         }

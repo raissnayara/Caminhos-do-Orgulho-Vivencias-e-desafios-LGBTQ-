@@ -102,6 +102,12 @@ public class Player : MonoBehaviour
 
         
     }
+
+    public void IncreaseLife(int value)
+    {
+        Health += value;
+        GameController.Instance.UpdatesLives(Health);
+    }
     
     void BowFire()
     {
