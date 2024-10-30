@@ -8,6 +8,8 @@ TagManager:
   - enemyBat
   - enemySpider
   - Boss 1
+  - Web
+  - Boss 2
   layers:
   - Default
   - TransparentFX

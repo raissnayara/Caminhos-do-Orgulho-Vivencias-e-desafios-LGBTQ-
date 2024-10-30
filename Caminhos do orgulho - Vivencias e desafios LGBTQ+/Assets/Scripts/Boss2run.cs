@@ -21,4 +21,6 @@ public class Boss2run : MonoBehaviour
         Vector2 newPosition = Vector2.MoveTowards(Rb.position, target, Speed * Time.fixedDeltaTime);
         Rb.MovePosition(newPosition);
     }
+    
+    
 }

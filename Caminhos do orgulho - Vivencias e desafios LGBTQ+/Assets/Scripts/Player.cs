@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Transform FirePoint;
     private float movement;
     public int Health = 3;
+    
 
     private Rigidbody2D rig;
     private Animator anim;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
         
         Jump();
         BowFire();
+   
     }
 
     void FixedUpdate()
@@ -70,6 +72,8 @@ public class Player : MonoBehaviour
         
             
     }
+    
+   
     
     void Jump()
     {

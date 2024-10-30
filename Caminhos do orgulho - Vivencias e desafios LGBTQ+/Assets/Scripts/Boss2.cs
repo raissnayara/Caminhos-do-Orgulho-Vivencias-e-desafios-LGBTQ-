@@ -1,29 +1,63 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss2 : MonoBehaviour
 {
-    public Transform player;
-
-    public bool isFlipped = false;
-
-    public void LookAtPlayer()
+    
+    public float speed;
+    public float WalkTime;
+    public float timer;
+    public bool WalkRight = true;
+    public int Health;
+    public int damage = 1;
+    
+    private Rigidbody2D rig;
+    // Start is called before the first frame update
+    void Start()
     {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
+        rig = GetComponent<Rigidbody2D>();
+    }
 
-        if (transform.position.x > player.position.x && isFlipped)
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= WalkTime)
         {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
+            WalkRight = !WalkRight;
+            timer = 0f;
         }
-        else if (transform.position.x < player.position.x && !isFlipped)
+
+        if (WalkRight)
         {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
+            transform.eulerAngles = new Vector2(0, 180);
+            rig.velocity = Vector2.right * speed;
+        }
+        else
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+            rig.velocity = Vector2.left * speed;
+        }
+    }
+    
+    public void Damamge(int dmg)
+    {
+        Health -= dmg;
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("bateu");
+            collision.gameObject.GetComponent<Player>().Damage(damage);
         }
     }
 }
