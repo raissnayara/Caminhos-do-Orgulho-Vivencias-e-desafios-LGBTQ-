@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     public Transform FirePoint;
     private float movement;
     public int Health = 3;
+
+    public Vector3 posInicial;
     
 
     private Rigidbody2D rig;
@@ -24,6 +26,8 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         
         GameController.Instance.UpdatesLives(Health);
+        posInicial = new Vector3(-6.91f, -3.22f, 0);
+        transform.position = posInicial;
     }
 
     private void Update()
