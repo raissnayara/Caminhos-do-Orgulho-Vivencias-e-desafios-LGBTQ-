@@ -10,6 +10,7 @@ TagManager:
   - Boss 1
   - Web
   - Boss 2
+  - BlazePoint
   layers:
   - Default
   - TransparentFX

@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         GameController.Instance.UpdatesLives(Health);
         posInicial = new Vector3(-6.91f, -3.22f, 0);
         transform.position = posInicial;
+        
     }
 
     private void Update()
@@ -35,12 +36,14 @@ public class Player : MonoBehaviour
         
         Jump();
         BowFire();
-   
+        
+
     }
 
     void FixedUpdate()
     {
         Move();
+        
     }
 
     void Move()
@@ -180,7 +183,8 @@ public class Player : MonoBehaviour
 
             transform.parent = coll.transform;
         }
-         
+
+       
         
     }
 
@@ -190,6 +194,17 @@ public class Player : MonoBehaviour
         {
             transform.parent = null;
         }
+        
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D Collider)
+    {
+        if (Collider.gameObject.tag == "BlazePoint")
+        {
+            posInicial = Collider.gameObject.transform.position;
+            Destroy(Collider.gameObject);
+        } 
     }
 }
     
