@@ -205,6 +205,20 @@ public class Player : MonoBehaviour
             posInicial = Collider.gameObject.transform.position;
             Destroy(Collider.gameObject);
         } 
+        if (Collider.gameObject.CompareTag("Web"))
+        {
+            speed = 1;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Web"))
+        {
+            speed = 5;
+        }
+
+        
     }
 }
     
