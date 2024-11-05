@@ -11,6 +11,8 @@ TagManager:
   - Web
   - Boss 2
   - BlazePoint
+  - Game Over
+  - Thorns
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Game Over
   - 
   - 
   - 

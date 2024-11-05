@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
         
         if (Health <= 0)
         {
-            
+            GameController.Instance.GameOver();
         }
         
         Debug.Log("bateu");
@@ -172,6 +172,7 @@ public class Player : MonoBehaviour
             transform.position += new Vector3(1, 1, 1);
         }
         
+       
 
     }
 
@@ -184,7 +185,11 @@ public class Player : MonoBehaviour
             transform.parent = coll.transform;
         }
 
-       
+        if (coll.gameObject.layer == 9)
+        {
+           
+            GameController.Instance.GameOver();
+        }
         
     }
 
@@ -194,6 +199,8 @@ public class Player : MonoBehaviour
         {
             transform.parent = null;
         }
+        
+        
         
         
     }
@@ -208,6 +215,11 @@ public class Player : MonoBehaviour
         if (Collider.gameObject.CompareTag("Web"))
         {
             speed = 1;
+        }
+        
+        if (Collider.gameObject.CompareTag("Thorns"))
+        {
+            
         }
     }
 

@@ -14,6 +14,11 @@ public class GameController : MonoBehaviour
     public int score;
 
     public Text ScoreText;
+
+    public GameObject PausedGame;
+    private bool isPaused;
+    public GameObject Gameover;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -31,7 +36,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PauseGame();
     }
 
    public void UpdateScore(int value)
@@ -48,5 +53,35 @@ public class GameController : MonoBehaviour
     public void Carregarcena(string level)
     {
         SceneManager.LoadScene("level-2");
+    }
+
+    public void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+            PausedGame.SetActive(isPaused);
+        }
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+        }
+
+        else
+        {
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void GameOver()
+    {
+        Gameover.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }
