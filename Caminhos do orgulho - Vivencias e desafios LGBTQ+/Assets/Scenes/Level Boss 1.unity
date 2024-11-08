@@ -2503,6 +2503,7 @@ MonoBehaviour:
   bow: {fileID: 5721653374377551771, guid: 6255c72a17b14774c85f1d20edffe89d, type: 3}
   FirePoint: {fileID: 825515243}
   Health: 4
+  posInicial: {x: 0, y: 0, z: 0}
 --- !u!212 &1917152185
 SpriteRenderer:
   m_ObjectHideFlags: 0
