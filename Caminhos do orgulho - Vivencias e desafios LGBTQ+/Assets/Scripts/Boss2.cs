@@ -58,7 +58,7 @@ public class Boss2 : MonoBehaviour
     public void Damage(int dmg)
     {
         health -= dmg;
-        BossControler.instance.UpdateLives(health);
+        //BossControler.instance.UpdateLives(health);
 
         if (health <= 0)
         {

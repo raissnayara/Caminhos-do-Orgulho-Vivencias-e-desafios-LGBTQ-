@@ -10,7 +10,7 @@ public class Boss1 : MonoBehaviour
     public Rigidbody2D rig;
     private bool faceflip;
 
-    public string Boss2;
+    public string Level2;
 
     public int damage = 1;
 
@@ -59,13 +59,12 @@ public class Boss1 : MonoBehaviour
     public void Damage(int dmg)
     {
         health -= dmg;
-        BossControler.instance.UpdateLives(health);
+        //BossControler.instance.UpdateLives(health);
 
         if (health <= 0)
         {
+            SceneManager.LoadScene("level2");
             Destroy(gameObject);
-            SceneManager.LoadScene("level-2");
-
         }
     }
 
@@ -77,5 +76,4 @@ public class Boss1 : MonoBehaviour
             Destroy(col.gameObject);
         }
     }
-
 }    
