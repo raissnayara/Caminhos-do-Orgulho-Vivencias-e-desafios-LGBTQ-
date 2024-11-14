@@ -5,59 +5,74 @@ using UnityEngine.SceneManagement;
 
 public class Boss2 : MonoBehaviour
 {
-    
     public float speed;
-    public float WalkTime;
-    public float timer;
-    public bool WalkRight = true;
-    public int Health;
+    public Rigidbody2D rig;
+    private bool faceflip;
+
+    public string Level3;
+
     public int damage = 1;
-    
-    private Rigidbody2D rig;
+
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        BossControler.instance.UpdateLives(health);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        timer += Time.deltaTime;
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+    }
 
-        if (timer >= WalkTime)
+    private void Flipenemy()
+    {
+        if (faceflip)
         {
-            WalkRight = !WalkRight;
-            timer = 0f;
-        }
-
-        if (WalkRight)
-        {
-            transform.eulerAngles = new Vector2(0, 180);
-            rig.velocity = Vector2.right * speed;
+            gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
-            transform.eulerAngles = new Vector2(0, 0);
-            rig.velocity = Vector2.left * speed;
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
-    
-    public void Damamge(int dmg)
+
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        Health -= dmg;
-        if (Health <= 0)
+        if (col != null && !col.collider.CompareTag("boss1") && !col.collider.CompareTag("chao"))
         {
+            faceflip = !faceflip;
+        }
+
+        Flipenemy();
+
+        if (col.gameObject.tag == "Player")
+        {
+            col.gameObject.GetComponent<Player>().Damage(damage);
+        }
+
+    }
+
+    public void Damage(int dmg)
+    {
+        health -= dmg;
+        BossControler.instance.UpdateLives(health);
+
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("level3");
             Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.tag == "Player")
+        if (col.gameObject.name.StartsWith("Player"))
         {
-            Debug.Log("bateu");
-            collision.gameObject.GetComponent<Player>().Damage(damage);
+            Damage(1);
+            Destroy(col.gameObject);
         }
     }
 }
