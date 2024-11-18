@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3dface36b4746044e876706141f14c4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3611b0ad3cce6647a90bbfaab3f015e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -640,7 +640,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &300535581
+--- !u!1 &299789974
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -648,37 +648,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 300535585}
-  - component: {fileID: 300535584}
-  - component: {fileID: 300535583}
-  - component: {fileID: 300535582}
+  - component: {fileID: 299789978}
+  - component: {fileID: 299789977}
+  - component: {fileID: 299789976}
+  - component: {fileID: 299789975}
   m_Layer: 0
-  m_Name: Heart Ref
+  m_Name: "Cora\xE7\xE3o de fogo"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &300535582
+--- !u!114 &299789975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300535581}
+  m_GameObject: {fileID: 299789974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f0050ba2bb9dc246be83be4eb857436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthValue: 1
---- !u!58 &300535583
+--- !u!58 &299789976
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300535581}
+  m_GameObject: {fileID: 299789974}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -704,16 +704,16 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.003536483, y: 0}
   serializedVersion: 2
-  m_Radius: 1.4
---- !u!212 &300535584
+  m_Radius: 0.058288768
+--- !u!212 &299789977
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300535581}
+  m_GameObject: {fileID: 299789974}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -748,28 +748,28 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3dface36b4746044e876706141f14c4c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3611b0ad3cce6647a90bbfaab3f015e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.43, y: 4.67}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &300535585
+--- !u!4 &299789978
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300535581}
+  m_GameObject: {fileID: 299789974}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.19, y: -2.89, z: 0}
-  m_LocalScale: {x: 0.25332624, y: 0.25332624, z: 0.25332624}
+  m_LocalPosition: {x: 9.177491, y: -2.9214358, z: 0}
+  m_LocalScale: {x: 4.5532, y: 4.5532, z: 4.5532}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8468,7 +8468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -284, y: 160}
+  m_AnchoredPosition: {x: -290, y: 167.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089042763
@@ -9255,7 +9255,7 @@ GameObject:
   - component: {fileID: 1772997089}
   - component: {fileID: 1772997088}
   m_Layer: 8
-  m_Name: frame 1 ataque
+  m_Name: Player Rafael
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9364,7 +9364,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9434,7 +9434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 4
+  jumpForce: 10
   bow: {fileID: 5721653374377551771, guid: 6255c72a17b14774c85f1d20edffe89d, type: 3}
   FirePoint: {fileID: 0}
   Health: 3
@@ -10855,7 +10855,6 @@ SceneRoots:
   - {fileID: 170172160794174760}
   - {fileID: 7094971693042170689}
   - {fileID: 4168706627989568769}
-  - {fileID: 300535585}
   - {fileID: 1772997083}
   - {fileID: 1850168667}
   - {fileID: 802994738}
@@ -10867,3 +10866,4 @@ SceneRoots:
   - {fileID: 692908923}
   - {fileID: 572536356}
   - {fileID: 821050638602220416}
+  - {fileID: 299789978}

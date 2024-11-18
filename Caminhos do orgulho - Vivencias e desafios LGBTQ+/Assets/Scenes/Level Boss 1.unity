@@ -138,9 +138,9 @@ GameObject:
   - component: {fileID: 40696553}
   - component: {fileID: 40696552}
   - component: {fileID: 40696555}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IngnoranciaBoss1
-  m_TagString: Boss1
+  m_TagString: boss1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
