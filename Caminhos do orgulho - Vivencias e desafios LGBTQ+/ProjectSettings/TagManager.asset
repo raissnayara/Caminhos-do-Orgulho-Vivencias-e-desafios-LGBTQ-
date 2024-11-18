@@ -15,6 +15,7 @@ TagManager:
   - Thorns
   - Final boss
   - Boss1
+  - bossFinal
   layers:
   - Default
   - TransparentFX

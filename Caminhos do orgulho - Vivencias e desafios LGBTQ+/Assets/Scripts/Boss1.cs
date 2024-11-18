@@ -25,7 +25,7 @@ public class Boss1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
 
     private void Flipenemy()
@@ -59,7 +59,7 @@ public class Boss1 : MonoBehaviour
     public void Damage(int dmg)
     {
         health -= dmg;
-        //BossControler.instance.UpdateLives(health);
+        BossControler.instance.UpdateLives(health);
 
         if (health <= 0)
         {

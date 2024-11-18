@@ -2230,8 +2230,12 @@ PrefabInstance:
       value: "Mestre do \xF3dio_0"
       objectReference: {fileID: 0}
     - target: {fileID: 7101323717582481165, guid: d7a8f4eec4a6e184bb57cdc0d8a11322, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101323717582481165, guid: d7a8f4eec4a6e184bb57cdc0d8a11322, type: 3}
       propertyPath: m_TagString
-      value: Final boss
+      value: bossFinal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
