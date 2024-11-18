@@ -41,7 +41,7 @@ public class Boss2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col != null && !col.collider.CompareTag("boss1") && !col.collider.CompareTag("chao"))
+        if (col != null && !col.collider.CompareTag("boss2") && !col.collider.CompareTag("chao"))
         {
             faceflip = !faceflip;
         }

@@ -16,6 +16,7 @@ TagManager:
   - Final boss
   - Boss1
   - bossFinal
+  - boss2
   layers:
   - Default
   - TransparentFX

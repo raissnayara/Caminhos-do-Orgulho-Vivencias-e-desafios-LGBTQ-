@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Transform FirePoint;
     private float movement;
     public int Health = 3;
+    private AudioSource SoundJump;
 
     public Vector3 posInicial;
     
@@ -28,7 +29,8 @@ public class Player : MonoBehaviour
         GameController.Instance.UpdatesLives(Health);
         posInicial = new Vector3(-6.91f, -3.22f, 0);
         transform.position = posInicial;
-        
+        SoundJump = GetComponent<AudioSource>();
+
     }
 
     private void Update()
@@ -55,7 +57,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("transition", 1);
+                anim.SetInteger("Transition", 1);
             }
             
             transform.eulerAngles = new Vector3(0,0,0);
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("transition", 1);
+                anim.SetInteger("Transition", 1);
             }
             
             transform.eulerAngles = new Vector3(0,180,0);
@@ -73,7 +75,7 @@ public class Player : MonoBehaviour
 
         if (movement == 0 && !isJumping && !isFire)
         {
-            anim.SetInteger("transition",0);
+            anim.SetInteger("Transition",0);
         }
         
         
@@ -88,7 +90,7 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                anim.SetInteger("transition", 2);
+                anim.SetInteger("Transition", 2);
                 rig.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 isJumping = true;
                 doubleJump = true;
@@ -101,7 +103,7 @@ public class Player : MonoBehaviour
             {
                 if (doubleJump)
                 {
-                    anim.SetInteger("transition", 2);
+                    anim.SetInteger("Transition", 2);
                     rig.AddForce(new Vector2(0, jumpForce * 2), ForceMode2D.Impulse);
                     doubleJump = false;
                     AudioObserver.OnPlaySfxEvent("Jump");
@@ -130,7 +132,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             isFire = true;
-            anim.SetInteger("transition", 3);
+            anim.SetInteger("Transition", 3);
             GameObject Bow = Instantiate(bow,FirePoint.position,FirePoint.rotation);
 
             if (transform.rotation.y == 0)
@@ -146,7 +148,7 @@ public class Player : MonoBehaviour
             
             yield return new WaitForSeconds(0.2f);
             isFire = false;
-            anim.SetInteger("transition", 0);
+            anim.SetInteger("Transition", 0);
         }
     }
 
