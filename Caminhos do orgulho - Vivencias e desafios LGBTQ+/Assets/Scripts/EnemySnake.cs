@@ -12,14 +12,14 @@ public class EnemySnake : MonoBehaviour
     public int damage = 1;
 
     private Rigidbody2D rig;
-    public Transform playerPos;
-    public Rigidbody2D groundRb;
-    public float distance;
+    //public Transform playerPos;
+    //public Rigidbody2D groundRb;
+    //public float distance;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+       // playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         rig = GetComponent<Rigidbody2D>();
     }
 
@@ -46,12 +46,12 @@ public class EnemySnake : MonoBehaviour
         }
         
         
-        distance = Vector2.Distance(transform.position, playerPos.position);
+        //distance = Vector2.Distance(transform.position, playerPos.position);
 
-        if (distance < 4)
-        {
-            Seguir();
-        }
+        //if (distance < 4)
+        //{
+       //     Seguir();
+       // }
 
     }
     
@@ -59,10 +59,10 @@ public class EnemySnake : MonoBehaviour
     
     
     
-    private void Seguir()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
-    }
+    //private void Seguir()
+    //{
+   //     transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+   // }
 
     public void Damamge(int dmg)
     {

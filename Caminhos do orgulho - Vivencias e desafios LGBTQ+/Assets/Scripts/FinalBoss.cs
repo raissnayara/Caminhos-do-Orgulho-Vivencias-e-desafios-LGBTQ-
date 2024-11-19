@@ -46,7 +46,7 @@ public class FinalBoss : MonoBehaviour
         tempTiro -= Time.deltaTime;
         if (tempTiro <= 0)
         {
-            Atirar();
+            StartCoroutine(Atirar());
             tempTiro = tempTiroMax; // Reinicia o contador de tiro
         }
     }
@@ -106,7 +106,7 @@ public class FinalBoss : MonoBehaviour
         }
     }
 
-    private void Atirar()
+    /*private void Atirar()
     {
         if (prefabDeTiro != null && tiroSpawnPoint != null)
         {
@@ -119,6 +119,21 @@ public class FinalBoss : MonoBehaviour
         }
 
 
+    }*/
+
+    IEnumerator Atirar()
+    {
+        if (prefabDeTiro != null && tiroSpawnPoint != null)
+        {
+            GameObject tiro = Instantiate(prefabDeTiro, tiroSpawnPoint.position, tiroSpawnPoint.rotation);
+            Rigidbody2D rbTiro = tiro.GetComponent<Rigidbody2D>();
+
+            // Define a direção e velocidade do tiro
+            Vector2 direcao = faceflip ? Vector2.left : Vector2.right;
+            rbTiro.velocity = direcao * velocidadeDoTiro;
+        }
+
+        yield return new WaitForSeconds(2f);
     }
 
 }    

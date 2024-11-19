@@ -61,7 +61,7 @@ public class Bow : MonoBehaviour
         
         if (collision.gameObject.tag == "boss2")
         {
-            collision.GetComponent<Boss1>().Damage(damage);
+            collision.GetComponent<Boss2>().Damage(damage);
             Destroy(gameObject);
         }
         

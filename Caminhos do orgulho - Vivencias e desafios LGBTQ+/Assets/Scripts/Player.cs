@@ -223,6 +223,11 @@ public class Player : MonoBehaviour
         {
             
         }
+
+        if (Collider.gameObject.CompareTag("boss2"))
+        {
+            Damage(1);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
