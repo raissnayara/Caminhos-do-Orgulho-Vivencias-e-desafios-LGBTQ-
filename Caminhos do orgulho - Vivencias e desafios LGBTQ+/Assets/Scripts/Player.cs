@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -140,6 +141,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            
             isFire = true;
             anim.SetInteger("Transition", 3);
             GameObject Bow = Instantiate(bow, FirePoint.position, FirePoint.rotation);
@@ -148,11 +150,11 @@ public class Player : MonoBehaviour
             {
                 Bow.GetComponent<Bow>().isRight = true;
             }
-
-            if (transform.rotation.y == 180)
+            else
             {
                 Bow.GetComponent<Bow>().isRight = false;
             }
+           
             
             
             yield return new WaitForSeconds(0.5f);
@@ -253,6 +255,8 @@ public class Player : MonoBehaviour
 
         
     }
+
+   
 }
     
     

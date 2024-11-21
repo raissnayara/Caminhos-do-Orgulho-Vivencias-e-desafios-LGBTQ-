@@ -8,7 +8,7 @@ public class EnemySnake : MonoBehaviour
     public float WalkTime;
     public float timer;
     public bool WalkRight = true;
-    public int Health;
+    public int Health = 2;
     public int damage = 1;
 
     private Rigidbody2D rig;
@@ -73,14 +73,18 @@ public class EnemySnake : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("bateu");
             collision.gameObject.GetComponent<Player>().Damage(damage);
         }
-
+        if (collision.gameObject.tag == "Tiro")
+        {
+            Damamge(1);
+            
+        }
 
     }
     

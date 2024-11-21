@@ -19,6 +19,7 @@ TagManager:
   - boss2
   - boss1
   - Spikes
+  - Tiro
   layers:
   - Default
   - TransparentFX
