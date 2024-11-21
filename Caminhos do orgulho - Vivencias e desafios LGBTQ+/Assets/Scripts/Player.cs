@@ -18,8 +18,9 @@ public class Player : MonoBehaviour
     private AudioSource SoundJump;
     private AudioSource SoundWalk;
     private AudioSource soundShot;
+    private AudioSource SoundBlazepoint;
 
-    public Vector3 posInicial;
+    //public Vector3 posInicial;
     
 
     private Rigidbody2D rig;
@@ -30,8 +31,8 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         
         GameController.Instance.UpdatesLives(Health);
-        posInicial = new Vector3(-6.91f, -3.22f, 0);
-        transform.position = posInicial;
+        //posInicial = new Vector3(-6.91f, -3.22f, 0);
+        //transform.position = posInicial;
         SoundJump = GetComponent<AudioSource>();
         SoundWalk = GetComponent<AudioSource>();
         soundShot = GetComponent<AudioSource>();
@@ -43,7 +44,8 @@ public class Player : MonoBehaviour
         
         Jump();
         BowFire();
-        
+        SoundBlazepoint = GetComponent<AudioSource>();
+
 
     }
 
@@ -227,7 +229,8 @@ public class Player : MonoBehaviour
     {
         if (Collider.gameObject.tag == "BlazePoint")
         {
-            posInicial = Collider.gameObject.transform.position;
+            SoundBlazepoint.Play();
+            //posInicial = Collider.gameObject.transform.position;
             Destroy(Collider.gameObject);
         } 
         if (Collider.gameObject.CompareTag("Web"))

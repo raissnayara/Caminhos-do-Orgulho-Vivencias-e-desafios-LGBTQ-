@@ -28,5 +28,9 @@ public class NextLevel : MonoBehaviour
         {
             GameController.Instance.Carregarcena("Level Boss 1");
         }
+        
+        
     }
+    
+    
 }

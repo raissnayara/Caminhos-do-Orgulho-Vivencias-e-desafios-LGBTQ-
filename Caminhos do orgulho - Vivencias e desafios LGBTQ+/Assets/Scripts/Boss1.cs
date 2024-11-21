@@ -80,5 +80,11 @@ public class Boss1 : MonoBehaviour
             Damage(1);
             Destroy(col.gameObject);
         }
+        
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("level2");
+            Destroy(gameObject, aguiaDie.clip.length);
+        }
     }
 }    

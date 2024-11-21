@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
     
     public void Carregarcena(string level)
     {
-        SceneManager.LoadScene("level-2");
+        SceneManager.LoadScene("Level Boss 1");
     }
 
     public void PauseGame()
