@@ -228,12 +228,17 @@ public class Player : MonoBehaviour
             speed = 1;
         }
         
-        if (Collider.gameObject.CompareTag("Thorns"))
+        if (Collider.gameObject.CompareTag("Spikes"))
         {
             
         }
 
         if (Collider.gameObject.CompareTag("boss2"))
+        {
+            Damage(1);
+        }
+        
+        if (Collider.gameObject.CompareTag("Spikes"))
         {
             Damage(1);
         }

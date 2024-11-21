@@ -18,6 +18,7 @@ TagManager:
   - bossFinal
   - boss2
   - boss1
+  - Spikes
   layers:
   - Default
   - TransparentFX
