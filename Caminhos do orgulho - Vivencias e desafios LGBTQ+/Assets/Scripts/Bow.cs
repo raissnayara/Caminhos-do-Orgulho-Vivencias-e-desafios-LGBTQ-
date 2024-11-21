@@ -50,6 +50,12 @@ public class Bow : MonoBehaviour
             Destroy(gameObject);
         }
         
+        if (collision.gameObject.tag == "enemySnake")
+        {
+            collision.GetComponent<EnemySnake>().Damamge(1);
+            Destroy(gameObject);
+        }
+        
         if (collision.gameObject.tag == "boss1")
         {
             collision.GetComponent<Boss1>().Damage(2);

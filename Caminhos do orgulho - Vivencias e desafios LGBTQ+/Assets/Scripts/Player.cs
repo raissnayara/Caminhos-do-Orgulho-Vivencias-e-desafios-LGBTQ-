@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public int Health = 3;
     private AudioSource SoundJump;
     private AudioSource SoundWalk;
+    private AudioSource soundShot;
 
     public Vector3 posInicial;
     
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         transform.position = posInicial;
         SoundJump = GetComponent<AudioSource>();
         SoundWalk = GetComponent<AudioSource>();
+        soundShot = GetComponent<AudioSource>();
 
     }
 
@@ -144,7 +146,10 @@ public class Player : MonoBehaviour
             
             isFire = true;
             anim.SetInteger("Transition", 3);
+            
             GameObject Bow = Instantiate(bow, FirePoint.position, FirePoint.rotation);
+            
+            soundShot.Play();
 
             if (transform.rotation.y == 0)
             {

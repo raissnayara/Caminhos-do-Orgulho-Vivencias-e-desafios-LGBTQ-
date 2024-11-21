@@ -11,12 +11,14 @@ public class enemySpider : MonoBehaviour
     public bool WalkRight = true;
     public int Health;
     public int damage = 1;
+    private AudioSource spiderDie;
     
     private Rigidbody2D rig;
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        spiderDie = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,9 +47,12 @@ public class enemySpider : MonoBehaviour
     public void Damamge(int dmg)
     {
         Health -= dmg;
+        
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            spiderDie.Play();
+            Destroy(gameObject, spiderDie.clip.length);
+           
         }
     }
 

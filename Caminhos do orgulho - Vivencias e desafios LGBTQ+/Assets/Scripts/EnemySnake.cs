@@ -10,17 +10,15 @@ public class EnemySnake : MonoBehaviour
     public bool WalkRight = true;
     public int Health = 2;
     public int damage = 1;
+    private AudioSource SnakeDie;
 
     private Rigidbody2D rig;
-    //public Transform playerPos;
-    //public Rigidbody2D groundRb;
-    //public float distance;
-
-    // Start is called before the first frame update
+   
     void Start()
     {
-       // playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+       
         rig = GetComponent<Rigidbody2D>();
+        SnakeDie = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,12 +44,7 @@ public class EnemySnake : MonoBehaviour
         }
         
         
-        //distance = Vector2.Distance(transform.position, playerPos.position);
-
-        //if (distance < 4)
-        //{
-       //     Seguir();
-       // }
+        
 
     }
     
@@ -59,18 +52,20 @@ public class EnemySnake : MonoBehaviour
     
     
     
-    //private void Seguir()
-    //{
-   //     transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
-   // }
+    
 
     public void Damamge(int dmg)
     {
         Health -= dmg;
+        SnakeDie.Play();
+        
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            SnakeDie.Play();
+            Destroy(gameObject,  SnakeDie.clip.length);
+            
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

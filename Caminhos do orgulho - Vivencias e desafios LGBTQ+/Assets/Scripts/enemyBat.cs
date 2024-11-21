@@ -11,12 +11,14 @@ public class enemyBat : MonoBehaviour
     public Rigidbody2D flyRb;
     public int Health;
     public int damage;
+    private AudioSource batDie;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        batDie = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,8 +42,8 @@ public class enemyBat : MonoBehaviour
         Health -= dmg;
         if (Health <= 0)
         {
-           
-            Destroy(gameObject);
+           batDie.Play();
+            Destroy(gameObject, batDie.clip.length);
         }
     }
     

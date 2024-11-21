@@ -15,6 +15,8 @@ public class Boss1 : MonoBehaviour
     public int damage = 1;
 
     public int health;
+    private AudioSource aguiaAtack;
+    private AudioSource aguiaDie;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class Boss1 : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+        aguiaAtack = GetComponent<AudioSource>();
+        aguiaDie = GetComponent<AudioSource>();
     }
 
     private void Flipenemy()
@@ -38,6 +42,7 @@ public class Boss1 : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        aguiaAtack.Play();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -64,7 +69,7 @@ public class Boss1 : MonoBehaviour
         if (health <= 0)
         {
             SceneManager.LoadScene("level2");
-            Destroy(gameObject);
+            Destroy(gameObject, aguiaDie.clip.length);
         }
     }
 

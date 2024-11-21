@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     public GameObject PausedGame;
     private bool isPaused;
     public GameObject Gameover;
+    public string ProxLevel;
     
     // Start is called before the first frame update
     void Awake()
@@ -83,5 +84,6 @@ public class GameController : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(0);
+        Gameover.SetActive(false);
     }
 }
