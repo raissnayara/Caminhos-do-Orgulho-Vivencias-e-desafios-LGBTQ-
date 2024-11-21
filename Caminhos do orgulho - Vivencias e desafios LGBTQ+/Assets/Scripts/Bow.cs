@@ -68,6 +68,12 @@ public class Bow : MonoBehaviour
             Destroy(gameObject);
         }
         
+        if (collision.gameObject.tag == "bossFinal")
+        {
+            collision.GetComponent<FinalBoss>().Damage(2);
+            Destroy(gameObject);
+        }
+        
         
         
     }
