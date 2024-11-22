@@ -86,7 +86,7 @@ public class Boss1 : MonoBehaviour
         {
             //SceneManager.LoadScene("level2");
             Destroy(gameObject, aguiaDie.clip.length);
-            SceneManager.LoadScene("level2");
+            SceneManager.LoadScene(4);
         }
     }
 }    

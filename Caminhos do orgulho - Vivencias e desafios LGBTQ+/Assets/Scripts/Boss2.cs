@@ -20,13 +20,14 @@ public class Boss2 : MonoBehaviour
     void Start()
     {
         BossControler.instance.UpdateLives(health);
-        GrifoAtack = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
+        GrifoAtack = GetComponent<AudioSource>();
     }
 
     private void Flipenemy()
@@ -68,7 +69,7 @@ public class Boss2 : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(6);
             Destroy(gameObject);
         }
     }

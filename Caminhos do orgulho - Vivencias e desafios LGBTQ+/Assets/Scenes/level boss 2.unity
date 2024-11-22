@@ -1135,7 +1135,7 @@ Transform:
   m_GameObject: {fileID: 697207012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.33, y: -0.1, z: 0}
+  m_LocalPosition: {x: -2.41, y: 0.5, z: 0}
   m_LocalScale: {x: 2.0161924, y: 2.0161924, z: 2.0161924}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   rig: {fileID: 0}
   Level3: 
   damage: 1
-  health: 5
+  health: 30
 --- !u!61 &697207017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1237,12 +1237,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697207012}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b046b4eb6a2dfdb4e976c4cae6f93325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthTexto: {fileID: 0}
+  healthTexto: {fileID: 1089042763}
 --- !u!82 &697207020
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1465,7 +1465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &859486042
 MonoBehaviour:
   m_ObjectHideFlags: 0

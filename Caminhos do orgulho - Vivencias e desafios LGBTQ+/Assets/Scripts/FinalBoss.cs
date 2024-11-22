@@ -92,7 +92,7 @@ public class FinalBoss : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("cutsceneFinal");
+            SceneManager.LoadScene(8);
             Destroy(gameObject);
         }
     }
