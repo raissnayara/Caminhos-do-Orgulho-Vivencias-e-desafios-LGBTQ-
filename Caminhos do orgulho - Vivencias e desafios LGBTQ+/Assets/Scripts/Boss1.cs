@@ -68,8 +68,9 @@ public class Boss1 : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("level2");
+            
             Destroy(gameObject, aguiaDie.clip.length);
+            SceneManager.LoadScene("Level - 2");
         }
     }
 
@@ -83,8 +84,9 @@ public class Boss1 : MonoBehaviour
         
         if (health <= 0)
         {
-            SceneManager.LoadScene("level2");
+            //SceneManager.LoadScene("level2");
             Destroy(gameObject, aguiaDie.clip.length);
+            SceneManager.LoadScene("level2");
         }
     }
 }    

@@ -14,11 +14,13 @@ public class Boss2 : MonoBehaviour
     public int damage = 1;
 
     public int health;
+    private AudioSource GrifoAtack;
 
     // Start is called before the first frame update
     void Start()
     {
         BossControler.instance.UpdateLives(health);
+        GrifoAtack = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class Boss2 : MonoBehaviour
 
     private void Flipenemy()
     {
+        GrifoAtack.Play(); 
+        
         if (faceflip)
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -37,6 +41,8 @@ public class Boss2 : MonoBehaviour
         {
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        
+       
     }
 
     private void OnCollisionEnter2D(Collision2D col)
