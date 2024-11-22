@@ -70,7 +70,7 @@ public class Boss1 : MonoBehaviour
         {
             
             Destroy(gameObject, aguiaDie.clip.length);
-            SceneManager.LoadScene("Level - 2");
+            SceneManager.LoadScene(2);
         }
     }
 

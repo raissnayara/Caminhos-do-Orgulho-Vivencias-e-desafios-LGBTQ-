@@ -68,7 +68,7 @@ public class Boss2 : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene("level3");
+            SceneManager.LoadScene(4);
             Destroy(gameObject);
         }
     }

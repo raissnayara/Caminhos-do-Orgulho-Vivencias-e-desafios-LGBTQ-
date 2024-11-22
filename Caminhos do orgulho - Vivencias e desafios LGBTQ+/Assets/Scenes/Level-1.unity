@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b758938385dc6548b362017581fd7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProxLevel: Level Boss 1
+  ProxLevel: 0
 --- !u!61 &308212941
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -64274,6 +64274,10 @@ PrefabInstance:
     - target: {fileID: 1278802020820024009, guid: c53f27c5a3dd8fc41aefd440f17f9f45, type: 3}
       propertyPath: m_Name
       value: ponto final
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353411003091291594, guid: c53f27c5a3dd8fc41aefd440f17f9f45, type: 3}
+      propertyPath: ProxLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3559797573904311959, guid: c53f27c5a3dd8fc41aefd440f17f9f45, type: 3}
       propertyPath: m_LocalPosition.x

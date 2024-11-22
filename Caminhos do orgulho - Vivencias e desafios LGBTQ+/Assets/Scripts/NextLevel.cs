@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public string ProxLevel;
+    public int ProxLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            GameController.Instance.Carregarcena("Level Boss 1");
+            GameController.Instance.Carregarcena(ProxLevel);
         }
         
         

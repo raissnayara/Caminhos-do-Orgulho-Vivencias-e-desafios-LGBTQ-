@@ -51,9 +51,9 @@ public class GameController : MonoBehaviour
         HealthText.text = "X " + value.ToString();
     }
     
-    public void Carregarcena(string level)
+    public void Carregarcena(int level)
     {
-        SceneManager.LoadScene("Level Boss 1");
+        SceneManager.LoadScene(level);
     }
 
     public void PauseGame()
