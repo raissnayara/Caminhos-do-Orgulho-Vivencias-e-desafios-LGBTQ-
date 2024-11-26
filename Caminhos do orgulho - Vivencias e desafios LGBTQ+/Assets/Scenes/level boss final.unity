@@ -1055,7 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b758938385dc6548b362017581fd7a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProxLevel: 0
+  ProxLevel: 8
 --- !u!1 &1089042761
 GameObject:
   m_ObjectHideFlags: 0

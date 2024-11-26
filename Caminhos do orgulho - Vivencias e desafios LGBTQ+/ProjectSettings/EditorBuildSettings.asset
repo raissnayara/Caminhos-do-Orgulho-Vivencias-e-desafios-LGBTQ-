@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level boss final.unity
     guid: 8156d5232bb8a204da28a574b1abb98e
+  - enabled: 1
+    path: Assets/Scenes/Cutscenes Final.unity
+    guid: 8ad62967f8db52240baf73ea74c08790
   m_configObjects: {}
